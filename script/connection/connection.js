@@ -13,4 +13,12 @@ export class connection {
     async loadDirectories() {
         return await this.fetchData("api/file.json");
     }
+
+    async loadUser() {
+        return await this.fetchData(`api/user.json`);
+    }
+
+    async loadSubjects() {
+        return await this.fetchData("api/subjects.json");
+    }
 }
