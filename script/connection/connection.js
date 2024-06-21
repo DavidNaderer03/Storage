@@ -1,7 +1,8 @@
 export class connection {
     #baseUrl = "https://davidnaderer03.github.io/Storage/"
+    #localUrl = ""
     async fetchData(url) {
-        const promise = await fetch(this.#baseUrl + url);
+        const promise = await fetch(url);
         let statusCode = promise.status;
         if(promise.ok) {
             return promise;
