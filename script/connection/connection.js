@@ -21,4 +21,8 @@ export class connection {
     async loadSubjects() {
         return await this.fetchData("api/subjects.json");
     }
+
+    async loadPages() {
+        return await this.fetchData("api/pages.json");
+    }
 }

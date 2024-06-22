@@ -3,10 +3,10 @@ import { connection} from "./connection/connection.js";
 const con = new connection();
 
 let contentList;
-document.addEventListener("DOMContentLoaded", async () => {
+async function initPage(){
     contentList = document.getElementById('content-list');
     await init();
-});
+}
 
 async function init() {
     let text = '';
