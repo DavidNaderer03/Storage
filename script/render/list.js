@@ -7,11 +7,11 @@ class icon {
     search = "bi-search"
 
     getSearchField() {
-        return `<div class="input-group w-25"><div class="input-group-prepend"><span class="input-group-text"><i class="bi ${this.search}"></i></span></div><input type="text" id="${this.id + '-field'}" class="form-control"></div>`;
+        return `<div class="input-group w-25 ml--3"><div class="input-group-prepend"><span class="input-group-text"><i class="bi ${this.search}"></i></span></div><input type="text" id="${this.id + '-field'}" class="form-control"></div>`;
     }
 
     getOptions(headers) {
-        let text = `<div class="input-group w-25"><div class="input-group-prepend"><span class="input-group-text">Options</span></div><select class="form-select" id="${this.id + '-select'}">`
+        let text = `<div class="input-group w-25 ml--3"><div class="input-group-prepend"><span class="input-group-text">Options</span></div><select class="form-select" id="${this.id + '-select'}">`
         for(const single of headers) {
             text += `<option>${single}</option>`
         }
