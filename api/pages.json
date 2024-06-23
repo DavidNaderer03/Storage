@@ -1,0 +1,12 @@
+[
+  {
+    "name": "index",
+    "url": "./pages/index.html",
+    "script": "./script/overview.js"
+  },
+  {
+    "name": "user",
+    "url": "./pages/user.html",
+    "script": "./script/table.js"
+  }
+]

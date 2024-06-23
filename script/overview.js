@@ -7,7 +7,7 @@ const pages = new paging();
 let contentList;
 
 async function init() {
-    alert("init");
+    console.log("init");
 }
 
 document.addEventListener('render', async (e) => {
