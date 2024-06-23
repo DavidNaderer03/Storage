@@ -1,12 +1,10 @@
-import { connection} from "./connection/connection.js";
+import { connection } from "./connection/connection.js";
+import {paging} from "./render/render.js";
 
 const con = new connection();
+const pages = new paging();
 
 let contentList;
-async function initPage(){
-    contentList = document.getElementById('content-list');
-    await init();
-}
 
 async function init() {
     let text = '';
@@ -17,3 +15,8 @@ async function init() {
     });
     contentList.innerHTML = text;
 }
+
+document.addEventListener('render', async (e) => {
+    contentList = document.getElementById('content-list');
+    await init();
+});

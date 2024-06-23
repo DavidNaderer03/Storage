@@ -25,4 +25,8 @@ export class connection {
     async loadPages() {
         return await this.fetchData("api/pages.json");
     }
+
+    async loadGrades() {
+        return await this.fetchData('api/grade.json');
+    }
 }

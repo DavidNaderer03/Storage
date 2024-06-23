@@ -1,0 +1,19 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.head .nav-menu-items {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+.head .nav-menu-items > li {
+    padding: 1rem;
+}
+
+.head .nav-menu-items > li:hover {
+    background-color: #c5c5c5;
+}
