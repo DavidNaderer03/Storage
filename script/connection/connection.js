@@ -1,11 +1,10 @@
 export class connection {
     async fetchData(url) {
         const promise = await fetch(url);
-        let statusCode = promise.status;
         if(promise.ok) {
             return promise;
         }
-        throw new Error(`Response from url:${url} has the status code:${statusCode}`)
+        throw new Error(`Response from url:${url} has the status code:${promise.status}`)
     }
 
     async loadDirectories() {
