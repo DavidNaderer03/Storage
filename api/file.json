@@ -1,8 +1,0 @@
-{
-  "Directory": [
-    {
-      "name": "user",
-      "url": "./api/user.json"
-    }
-  ]
-}
