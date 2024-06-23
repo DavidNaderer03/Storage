@@ -1,5 +1,5 @@
 export class connection {
-    #baseUrl = "http://us2.waifly.com:1561/"
+    #baseUrl = "http://45.90.12.106:6049/"
     #localUrl = ""
     async fetchData(url) {
         const promise = await fetch(this.#baseUrl + url);
