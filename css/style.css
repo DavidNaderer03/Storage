@@ -18,3 +18,12 @@
 .head .nav-menu-items > li:hover {
     background-color: #c5c5c5;
 }
+
+#arithmetic-middle {
+    display: flex;
+    flex-direction: column;
+}
+
+div:has(#arithmetic-middle) {
+    margin: 1rem;
+}

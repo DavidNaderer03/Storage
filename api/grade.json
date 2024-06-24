@@ -14,5 +14,37 @@
         "software_knowledge": 1,
         "computer_architecture": 2
     }
+  },
+  {
+    "id": 1,
+    "subjects": {
+      "english": 2,
+      "programming": 3,
+      "german": 2,
+      "accounting": 4,
+      "company_management": 3,
+      "history": 1,
+      "sport": 1,
+      "math": 4,
+      "networking": 3,
+      "software_knowledge": 1,
+      "computer_architecture": 4
+    }
+  },
+  {
+    "id": 2,
+    "subjects": {
+      "english": 1,
+      "programming": 1,
+      "german": 2,
+      "accounting": 1,
+      "company_management": 1,
+      "history": 1,
+      "sport": 1,
+      "math": 1,
+      "networking": 1,
+      "software_knowledge": 2,
+      "computer_architecture": 1
+    }
   }
 ]

@@ -1,12 +1,14 @@
 [
   {
-    "name": "index",
+    "name": "Home",
     "url": "./pages/index.html",
-    "script": "./script/overview.js"
+    "script": "./script/overview.js",
+    "icon": "bi-house-door-fill"
   },
   {
-    "name": "user",
+    "name": "User",
     "url": "./pages/user.html",
-    "script": "./script/table.js"
+    "script": "./script/table.js",
+    "icon": "bi-people"
   }
 ]

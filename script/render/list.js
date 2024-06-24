@@ -45,7 +45,7 @@ export class list extends icon {
             if(typeof this.parseElements === "function") {
                 text += this.parseElements(element);
             } else {
-                text += this.#defaultElement(element);
+                text += "<tr>" + this.#defaultElement(element) + "</tr>";
             }
         });
         document.getElementById(this.elementId).innerHTML = text;

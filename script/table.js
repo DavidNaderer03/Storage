@@ -8,6 +8,7 @@ document.addEventListener('render', async (e) => {
     headerElement = document.getElementById('load-table-header');
     await initHeader();
     const entities = await addEntities();
+    await setMiddleValues(entities);
     const studentList = new list(entities, undefined, initHeader, await getHeader(), 'load-table-header', 'table-body', 'searchField');
     studentList.render();
 });
@@ -58,4 +59,36 @@ async function getHeader() {
     const json = await header.json();
     json.push("name");
     return json;
+}
+
+function setId(id, value) {
+    document.getElementById(id).innerHTML = value;
+}
+
+function calculateArithmeticMiddle(entities, key) {
+    let sum = 0;
+    entities.forEach(element => {
+        sum += element[key];
+    });
+    return sum / entities.length;
+}
+
+async function setMiddleValues(entities) {
+    const subjects = await con.loadSubjects();
+    const json = await subjects.json();
+    const middleValues = []
+    const contextValues = [];
+    json.forEach((element, i) => {
+        let sum = 0;
+        const key = element.replace(' ', '_');
+        entities.forEach(e => {
+            sum += parseInt(e[key]);
+        });
+        contextValues.push(element);
+        middleValues.push((sum / entities.length).toFixed(2));
+    });
+    const children = document.getElementById('arithmetic-middle').children;
+    for (let i = 0; i < children.length; i++) {
+        children[i].innerHTML = `${contextValues.pop()}: ${middleValues.pop()}`;
+    }
 }
