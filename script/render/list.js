@@ -75,7 +75,13 @@ export class list extends icon {
     #defaultElement(element) {
         let text = '';
         for(const key in element) {
-            text += `<td class="text-center">${element[key]}</td>`;
+            let value = parseFloat(element[key]);
+            if(isNaN(value)) {
+                value = element[key];
+            } else {
+                value = value.toFixed(2);
+            }
+            text += `<td class="text-center">${value}</td>`;
         }
         return text;
     }

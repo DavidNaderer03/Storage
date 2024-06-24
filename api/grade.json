@@ -3,7 +3,7 @@
     "id": 0,
     "subjects": {
         "english": 2,
-        "programming": 2,
+        "programming": 3,
         "german": 3,
         "accounting": 2,
         "company_management": 2,
@@ -12,7 +12,8 @@
         "math": 2,
         "networking": 1,
         "software_knowledge": 1,
-        "computer_architecture": 2
+        "computer_architecture": 2,
+        "wmc": 2
     }
   },
   {
@@ -28,7 +29,8 @@
       "math": 4,
       "networking": 3,
       "software_knowledge": 1,
-      "computer_architecture": 4
+      "computer_architecture": 4,
+      "wmc": 3
     }
   },
   {
@@ -44,7 +46,59 @@
       "math": 1,
       "networking": 1,
       "software_knowledge": 2,
-      "computer_architecture": 1
+      "computer_architecture": 1,
+      "wmc": 2
+    }
+  },
+  {
+    "id": 3,
+    "subjects": {
+      "english": 1,
+      "programming": 1,
+      "german": 1,
+      "accounting": 1,
+      "company_management": 1,
+      "history": 1,
+      "sport": 1,
+      "math": 1,
+      "networking": 1,
+      "software_knowledge": 1,
+      "computer_architecture": 1,
+      "wmc": 1
+    }
+  },
+  {
+    "id": 4,
+    "subjects": {
+      "english": 1,
+      "programming": 1,
+      "german": 2,
+      "accounting": 4,
+      "company_management": 2,
+      "history": 1,
+      "sport": 1,
+      "math": 4,
+      "networking": 2,
+      "software_knowledge": 3,
+      "computer_architecture": 2,
+      "wmc": 3
+    }
+  },
+  {
+    "id": 5,
+    "subjects": {
+      "english": 2,
+      "programming": 2,
+      "german": 2,
+      "accounting": 3,
+      "company_management": 2,
+      "history": 2,
+      "sport": 1,
+      "math": 3,
+      "networking": 2,
+      "software_knowledge": 1,
+      "computer_architecture": 3,
+      "wmc": 3
     }
   }
 ]

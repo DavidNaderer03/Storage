@@ -1,0 +1,20 @@
+
+#load-table-header > th:first-child {
+    border-top-left-radius: 15px;
+}
+
+#load-table-header > th:last-child {
+    border-top-right-radius: 15px;
+}
+
+#table-body > tr:last-child > td:first-child {
+    border-bottom-left-radius: 15px;
+}
+
+#table-body > tr:last-child > td:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+#table-body > tr:last-child {
+    border-bottom: none;
+}

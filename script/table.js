@@ -20,6 +20,7 @@ async function initHeader() {
     json.forEach(element => {
         text += `<th>${element}</th>`;
     });
+    text += '<th>Arithmetic middle</th>'
     document.getElementById('load-table-header').innerHTML = text;
 }
 
@@ -28,7 +29,13 @@ async function addEntities() {
         const response = await con.loadGrades();
         const json = await response.json();
         const entity = json.find(x => x.id === element.id);
-        const { english, programming, german, accounting, company_management, history, sport, math, networking, software_knowledge, computer_architecture } = entity.subjects;
+        let count = 0;
+        let sum = 0;
+        for(const key in entity.subjects) {
+            sum += entity.subjects[key];
+            count++;
+        }
+        const { english, programming, german, accounting, company_management, history, sport, math, networking, software_knowledge, computer_architecture, wmc } = entity.subjects;
         return {
             name: element.name,
             english: english,
@@ -41,7 +48,9 @@ async function addEntities() {
             math: math,
             networking: networking,
             software_knowledge: software_knowledge,
-            computer_architecture: computer_architecture
+            computer_architecture: computer_architecture,
+            wmc: wmc,
+            middle: sum / count
         };
     };
     const entities = [];
@@ -58,6 +67,7 @@ async function getHeader() {
     const header = await con.loadSubjects();
     const json = await header.json();
     json.push("name");
+    json.push("middle");
     return json;
 }
 
@@ -74,6 +84,7 @@ function calculateArithmeticMiddle(entities, key) {
 }
 
 async function setMiddleValues(entities) {
+    let text = ''
     const subjects = await con.loadSubjects();
     const json = await subjects.json();
     const middleValues = []
@@ -84,11 +95,7 @@ async function setMiddleValues(entities) {
         entities.forEach(e => {
             sum += parseInt(e[key]);
         });
-        contextValues.push(element);
-        middleValues.push((sum / entities.length).toFixed(2));
+        text += `<span>${element}: ${(sum / entities.length).toFixed(2)}</span>`;
     });
-    const children = document.getElementById('arithmetic-middle').children;
-    for (let i = 0; i < children.length; i++) {
-        children[i].innerHTML = `${contextValues.pop()}: ${middleValues.pop()}`;
-    }
+    document.getElementById('arithmetic-middle').innerHTML = text;
 }

@@ -1,3 +1,9 @@
+@import "root.css";
+
 body[theme="dark"] {
-    
+    background-color: var(--dark-background);
+}
+
+body[theme="light"] {
+    background-color: var(--light-background);
 }

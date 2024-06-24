@@ -1,4 +1,6 @@
 @import "margin.css";
+@import "theme.css";
+@import "table.css";
 
 * {
     margin: 0;
