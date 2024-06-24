@@ -100,5 +100,39 @@
       "computer_architecture": 3,
       "wmc": 3
     }
+  },
+  {
+    "id": 6,
+    "subjects": {
+      "english": 2,
+      "programming": 1,
+      "german": 2,
+      "accounting": 2,
+      "company_management": 2,
+      "history": 1,
+      "sport": 1,
+      "math": 3,
+      "networking": 1,
+      "software_knowledge": 1,
+      "computer_architecture": 1,
+      "wmc": 1
+    }
+  },
+  {
+    "id": 7,
+    "subjects": {
+      "english": 2,
+      "programming": 4,
+      "german": 4,
+      "accounting": 4,
+      "company_management": 3,
+      "history": 3,
+      "sport": 1,
+      "math": 4,
+      "networking": 3,
+      "software_knowledge": 3,
+      "computer_architecture": 5,
+      "wmc": 4
+    }
   }
 ]
