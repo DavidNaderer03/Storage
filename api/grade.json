@@ -38,7 +38,7 @@
     "subjects": {
       "english": 1,
       "programming": 1,
-      "german": 2,
+      "german": 1,
       "accounting": 1,
       "company_management": 1,
       "history": 1,
@@ -149,7 +149,7 @@
       "networking": 4,
       "software_knowledge": 2,
       "computer_architecture": 4,
-      "wmc": 4<
+      "wmc": 4
     }
   }
 ]
